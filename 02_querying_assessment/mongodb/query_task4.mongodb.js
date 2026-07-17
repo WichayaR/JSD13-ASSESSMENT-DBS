@@ -18,4 +18,15 @@
 // Write in English or Thai. Do not skip this step.
 //
 // Your thinking:
-//
+//จากโจทย์ต้องการเห็น revenue summary
+
+use("chrome-burger-db"); //ใช้ database อันนี้
+
+db.orders.aggregate([
+    {
+    $group:{
+        _id: null,
+        total_revenue:{$sum:"$total_price"}
+    }
+    }
+]); //ใช้ aggregate() ใน Collection orders เพื่อทำการคำนวณ และใช้ $group โดยกำหนดค่า _id:_null เพื่อให้ document ของ orders มารวมกัน แล้วสร้างฟิลด์ใหม่ตามโจทย์คือ total_revenue ใช้ $sum อ้างอิงไปที่ฟิลด์ $total_price เพื่อดึงราคาใน orders มาบวกกันทุกตัวเพื่อหาผลลัพธ์ให้ไปแสดงที่ฟิลด์ใหม่ที่สร้าง
