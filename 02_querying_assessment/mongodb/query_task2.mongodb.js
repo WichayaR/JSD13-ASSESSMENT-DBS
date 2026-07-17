@@ -19,3 +19,7 @@
 //
 // Your thinking:
 //
+
+use("chrome-burger-db"); //ก็คือจะเรียกใช้ Database นี้
+
+db.orders.find({"staff.first_name":"Jane","staff.last_name":"Doe"},{_id:0,order_date:1,total_price:1});
