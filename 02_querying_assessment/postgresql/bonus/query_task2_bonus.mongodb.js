@@ -17,4 +17,11 @@
 // Write in English or Thai. Do not skip this step.
 //
 // Your thinking:
-//
+//จากโจทย์ต้องการข้อมูล first_name และ last_name โดยที่ role คือ cook
+
+use("chrome-burger-db"); //เรียกใช้databaseอันนี้
+
+db.staff.find(
+  { role: "Cook" },
+  { first_name: 1, last_name: 1, _id: 0 }
+);
