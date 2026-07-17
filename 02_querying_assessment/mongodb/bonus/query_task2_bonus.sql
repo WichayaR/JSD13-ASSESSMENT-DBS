@@ -18,4 +18,9 @@
 -- Write in English or Thai. Do not skip this step.
 --
 -- Your thinking:
---
+--จากโจทย์ให้หาว่า พนักงานชื่อ Jane Doe จะมีการประเมินการปฎิบัติงาน โดยหัวหน้าจะขอดูประวัติการรับออเดอร์ ต้องการขอข้อมูล2อย่างคือ order_date กับ total_price
+
+SELECT Orders.order_date, Orders.total_price 
+FROM Orders 
+JOIN Staff ON Orders.staff_id = Staff.staff_id
+WHERE Staff.first_name = 'Jane' AND Staff.last_name = 'Doe';
