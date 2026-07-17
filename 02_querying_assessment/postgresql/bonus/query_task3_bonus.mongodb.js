@@ -21,7 +21,7 @@
 // Your thinking:
 //จากโจทย์ต้องการนับจำนวนออเดอร์ของพนักงานแต่ละคน โดยเรียงจากมากไปน้อย
 
-use("chrome-burger-db")
+use("chrome-burger-db");
 
 db.orders.aggregate([
   {

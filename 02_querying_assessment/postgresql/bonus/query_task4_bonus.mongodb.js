@@ -19,4 +19,28 @@
 // Write in English or Thai. Do not skip this step.
 //
 // Your thinking:
-//
+//จากโจทย์ต้องการหาชื่อวัตถุดิบ name ที่มาจากซัพพลายเออร์ชื่อ 'Freshest Farm Produce'
+
+use("chrome-burger-db");
+
+db.ingredients.aggregate([
+  {
+    $lookup: {
+      from: "suppliers",
+      localField: "supplier_id",
+      foreignField: "_id",
+      as: "supplier_details"
+    }
+  },
+  {
+    $match: {
+      "supplier_details.name": "Freshest Farm Produce"
+    }
+  },
+  {
+    $project: {
+      name: 1,
+      _id: 0
+    }
+  }
+]);
