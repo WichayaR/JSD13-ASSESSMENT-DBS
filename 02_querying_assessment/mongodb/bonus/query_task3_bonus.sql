@@ -17,4 +17,8 @@
 -- Write in English or Thai. Do not skip this step.
 --
 -- Your thinking:
---
+--จากโจทย์ต้องการ stock ตั้งแต่ 100 ต้องดึงคอลัมน์ stock_level จากตาราง Ingredients
+
+SELECT stock_level
+FROM Ingredients
+WHERE stock_level >= 100;
