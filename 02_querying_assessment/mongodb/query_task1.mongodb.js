@@ -17,4 +17,8 @@
 // Write in English or Thai. Do not skip this step.
 //
 // Your thinking:
-//
+//ก็คือโจทย์ให้หาเมนูใดบ้างที่มีราคาต่ำกว่า 10 สิ่งที่จะเขียน query คือค้นหาเมนูอาหารจาก collection ชื่อ menu_items ที่มีราคาน้อยกว่า 10 โดยจะเขียนดังนี้
+
+use("chrome-burger-db"); //เรียกใช้databaseอันนี้
+
+db.menu_items.find({price:{$lt:10}}).sort({price:-1}); //เพื่อค้นหา Documentsใน Collection ที่ชื่อว่า menu_items โดยใช้ find() เพื่อหาหลายอันและกำหนดเงื่อนไขให้ฟิลด์ price มีค่าน้อยกว่า 10 และใช้ sort() เพื่อให้ข้อมูลที่ออกมาอ่านง่าย โดยกำหนดเงื่อนไข -1 คือ ให้เรียงฟิลด์จากมากสุดลงไปน้อยสุด
