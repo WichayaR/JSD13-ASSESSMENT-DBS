@@ -19,4 +19,21 @@
 // Write in English or Thai. Do not skip this step.
 //
 // Your thinking:
-//
+//จากโจทย์ต้องการนับจำนวนออเดอร์ของพนักงานแต่ละคน โดยเรียงจากมากไปน้อย
+
+use("chrome-burger-db")
+
+db.orders.aggregate([
+  {
+    $group: {
+      _id: {
+        first_name: "$staff.first_name",
+        last_name: "$staff.last_name"
+      },
+      total_orders: { $sum: 1 }
+    }
+  },
+  {
+    $sort: { total_orders: -1 }
+  }
+]);
