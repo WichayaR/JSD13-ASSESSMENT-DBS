@@ -17,4 +17,8 @@
 -- Write in English or Thai. Do not skip this step.
 --
 -- Your thinking:
---
+--จากโจทย์ต้องการข้อมูล first_name และ last_name โดยที่ role คือ cook
+
+SELECT first_name, last_name 
+FROM Staff 
+WHERE role = 'Cook';
