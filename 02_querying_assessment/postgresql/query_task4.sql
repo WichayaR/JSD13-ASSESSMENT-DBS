@@ -17,4 +17,9 @@
 -- Write in English or Thai. Do not skip this step.
 --
 -- Your thinking:
---
+--จากโจทย์ต้องการหา Ingredient names ทั้งหมดที่ส่งมาจาก supplier ชื่อ Freshest Farm Produce
+
+SELECT Ingredients.name
+FROM Ingredients
+JOIN Suppliers ON Ingredients.supplier_id = Suppliers.supplier_id
+WHERE Suppliers.name = 'Freshest Farm Produce';
