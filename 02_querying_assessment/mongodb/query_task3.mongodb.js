@@ -17,4 +17,9 @@
 // Write in English or Thai. Do not skip this step.
 //
 // Your thinking:
-//
+//จากโจทย์ต้องการ stock ตั้งแต่ 100
+
+use("chrome-burger-db"); //ใช้ database อันนี้
+
+
+db.ingredients.find({stock_level:{$gte:100}}).sort({stock_level:1}); // ใช้ db เรียก collection มา find() หา stock_level โดยใช้ $gte มีค่ามากกว่าหรือเท่ากับและใช้ .sort() เพื่อให้ลำดับเรียงจากน้อยไปมากจะได้ดูข้อมูลได้ง่ายขึ้น
