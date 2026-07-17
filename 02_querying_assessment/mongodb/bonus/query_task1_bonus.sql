@@ -17,5 +17,8 @@
 -- Write in English or Thai. Do not skip this step.
 --
 -- Your thinking:
---
+--จากโจทย์ต้องการหา name และprice โดยดึงข้อมูลจากตาราง MenuItems และใช้คำสั่ง WHERE เพื่อตั้งเงื่อนไขให้คอลัมน์ price มีค่าน้อยกว่า 10
 
+SELECT name, price
+FROM MenuItems
+WHERE price < 10;
