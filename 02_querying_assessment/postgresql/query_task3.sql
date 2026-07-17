@@ -19,4 +19,12 @@
 -- Write in English or Thai. Do not skip this step.
 --
 -- Your thinking:
---
+--โจทย์ต้องการดูว่า staff member แต่ละคนรับ oreders ไปแล้วกี่รายการ โดยให้เรียงจากมากไปน้อย 
+
+SELECT 
+    first_name || ' ' || last_name AS full_name,
+    COUNT(order_id) AS total_order_count
+    FROM STAFF 
+    JOIN Orders ON Staff.staff_id = Orders.staff_id
+    GROUP BY Staff.staff_id, Staff.first_name, Staff.last_name
+    ORDER BY total_order_count DESC;
