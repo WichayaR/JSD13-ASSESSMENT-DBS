@@ -17,4 +17,11 @@
 // Write in English or Thai. Do not skip this step.
 //
 // Your thinking:
-//
+//จากโจทย์ต้องการหา name และ price จาก menu_items โดย category เป็น Side
+
+use("chrome-burger-db"); //เรียกใช้databaseอันนี้
+
+db.menu_items.find(
+  { category: "Side" },
+  { name: 1, price: 1, _id: 0 }
+);
