@@ -17,4 +17,8 @@
 -- Write in English or Thai. Do not skip this step.
 --
 -- Your thinking:
---
+--จากโจทย์ต้องการหาชื่อ side dishes พร้อมกับ price โดยจะดึงข้อมูลจากตาราง MenuItems และตั้งเงื่อนไข WHERE ให้ category เท่ากับ Side
+
+SELECT name,price
+From  MenuItems
+WHERE category = 'Side';
