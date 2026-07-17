@@ -17,4 +17,7 @@
 -- Write in English or Thai. Do not skip this step.
 --
 -- Your thinking:
---
+--จากโจทย์ต้องการเห็นคอลัมน์ revenue summary โดยต้องหายอดขายรวมทั้งหมด
+
+SELECT SUM(total_price) AS total_revenue
+FROM Orders;
