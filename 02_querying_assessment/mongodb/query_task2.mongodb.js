@@ -18,8 +18,8 @@
 // Write in English or Thai. Do not skip this step.
 //
 // Your thinking:
-//
+//จากโจทย์ให้หาว่า พนักงานชื่อ Jane Doe จะมีการประเมินการปฎิบัติงาน โดยหัวหน้าจะขอดูประวัติการรับออเดอร์ ต้องการขอข้อมูล2อย่างคือ order_date กับ total_price
 
 use("chrome-burger-db"); //ก็คือจะเรียกใช้ Database นี้
 
-db.orders.find({"staff.first_name":"Jane","staff.last_name":"Doe"},{_id:0,order_date:1,total_price:1});
+db.orders.find({"staff.first_name":"Jane","staff.last_name":"Doe"},{_id:0,order_date:1,total_price:1}); //ใช้ collection order เพื่อ find() หา โดย ({เงื่อนไขการหา},{การเลือกฟิลด์}) เงื่อนไขการหาในstaff มันมีฟิลด์_idด้วย เลยต้องเขียนแบบไม่มีจุดเชื่อม ส่วนการใส่ค่าในการเลือกฟิลด์ 0 คือไม่ต้องการให้แสดงค่าฟิลด์นั้น 1 คือต้องการให้แสดงค่าฟิลด์นั้น
